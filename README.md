@@ -1,1 +1,13 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Soccer Tournament Simulation
+
+### It is designed to simulate all matches of 4 teams whose fixtures are determined.
+```
+git clone https://github.com/bartukocakara/laravel-vue-football-tournament-simulation.git
+cd laravel-vue-football-tournament-simulation
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate:fresh --seed (Before run this please make sure db connection configured right way)
+npm install
+npm run dev
+```
