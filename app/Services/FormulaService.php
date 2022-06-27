@@ -9,21 +9,21 @@ namespace App\Services;
 class FormulaService
 {
     /**
-     * @param $clubs
+     * @param $teams
      * @return int
      */
-    public static function setTotalWeek($clubs): int
+    public static function setTotalWeek($teams): int
     {
-        return $clubs->count() - 1;
+        return $teams->count() - 1;
     }
 
     /**
-     * @param $clubs
+     * @param $teams
      * @return float|int
      */
-    public static function setWeeklyMatchCount($clubs)
+    public static function setWeeklyMatchCount($teams)
     {
-        return $clubs->count() / 2;
+        return $teams->count() / 2;
     }
 
     /**
@@ -38,12 +38,12 @@ class FormulaService
 
     /**
      * @param $drawPoint
-     * @param $homeClubCapability
-     * @param $awayClubCapability
+     * @param $homeTeamCapability
+     * @param $awayTeamCapability
      * @return mixed
      */
-    public static function calculateTotalPoint($drawPoint,$homeClubCapability,$awayClubCapability)
+    public static function calculateTotalPoint($drawPoint,$homeTeamCapability,$awayTeamCapability)
     {
-        return $drawPoint + $homeClubCapability + $awayClubCapability;
+        return $drawPoint + $homeTeamCapability + $awayTeamCapability;
     }
 }

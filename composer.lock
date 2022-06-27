@@ -5785,7 +5785,7 @@
             "keywords": [
                 "data",
                 "faker",
-                "fixtures"
+                "groups"
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",

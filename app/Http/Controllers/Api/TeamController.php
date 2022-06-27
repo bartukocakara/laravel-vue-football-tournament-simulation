@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\Team\TeamCollection;
-use App\Repositories\TeamRepository;
+use App\Repositories\Interfaces\ITeamRepositoryInterface;
 
 class TeamController extends Controller
 {
     private $teamRepository;
 
-    public function __construct(TeamRepository $teamRepository)
+    public function __construct(ITeamRepositoryInterface $teamRepository)
     {
         $this->teamRepository = $teamRepository;
     }

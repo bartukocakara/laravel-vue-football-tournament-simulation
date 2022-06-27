@@ -45,17 +45,17 @@ class GroupService
     }
 
     /**
-     * @param $clubs
+     * @param $teams
      * @return mixed
      */
-    public function generateGroups($clubs)
+    public function generateGroups($teams)
     {
         $this->groupRepository->truncate();
         $group = collect();
-        $weekCount = FormulaService::setTotalWeek($clubs);
+        $weekCount = FormulaService::setTotalWeek($teams);
 
         foreach (range(1, $weekCount) as $weekNumber) {
-            $group = $group->merge($this->groupRepository->setWeekgroup($weekNumber, $clubs, $group));
+            $group = $group->merge($this->groupRepository->setWeekgroup($weekNumber, $teams, $group));
         }
 
         $data = $this->groupRepository->setRevenge($group->toArray(), $weekCount);
